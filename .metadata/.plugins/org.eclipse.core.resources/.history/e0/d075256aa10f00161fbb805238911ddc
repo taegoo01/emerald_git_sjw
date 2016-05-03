@@ -1,0 +1,10 @@
+package com.javalec.env;
+
+public class MainClass {
+
+	public static void main(String[] args) {
+
+		
+	}
+
+}

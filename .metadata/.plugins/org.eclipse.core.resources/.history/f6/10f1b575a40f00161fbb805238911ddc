@@ -1,0 +1,32 @@
+package com.javalec.env;
+
+import org.springframework.beans.factory.DisposableBean;
+import org.springframework.beans.factory.InitializingBean;
+import org.springframework.context.EnvironmentAware;
+import org.springframework.core.env.Environment;
+
+public class AdminConnection implements EnvironmentAware, InitializingBean, DisposableBean{
+  
+	
+	private Environment env;
+	private String adminId;
+	private String adminPw;
+	
+	@Override
+	public void setEnvironment(Environment env) {
+		System.out.println("가장먼저 호출됨");
+	}
+	
+	@Override
+	public void destroy() throws Exception {
+		
+	}
+
+	@Override
+	public void afterPropertiesSet() throws Exception {
+		
+	}
+
+	
+
+}

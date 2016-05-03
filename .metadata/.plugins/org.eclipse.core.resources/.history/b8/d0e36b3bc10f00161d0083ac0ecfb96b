@@ -1,0 +1,10 @@
+package com.javalec.ex;
+
+import org.aspectj.lang.ProceedingJoinPoint;
+
+public class LogAop {
+
+	public Object loggerAop(ProceedingJoinPoint joinpoint){
+		
+	}
+}

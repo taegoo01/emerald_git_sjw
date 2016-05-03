@@ -1,0 +1,20 @@
+package com.javalex.ex;
+
+import org.springframework.context.support.AbstractApplicationContext;
+import org.springframework.context.support.GenericXmlApplicationContext;
+
+public class mainClass {
+
+	public static void main(String[] args) {
+		String configLocation = "classpath:applicationCTX.xml";
+		AbstractApplicationContext ctx = new GenericXmlApplicationContext(configLocation);
+		
+		
+//		ctx.getBean("student", Student.class);
+//	
+		
+		ctx.close();
+
+	}
+
+}

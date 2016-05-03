@@ -1,0 +1,7 @@
+package com.javalex.ex;
+
+import org.springframework.beans.factory.InitializingBean;
+
+public class Student implements InitializingBean{
+
+}

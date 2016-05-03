@@ -1,0 +1,43 @@
+package com.javalec.ex;
+
+public class MyCalculator {
+
+	public Calculator calculator;
+	private int firstNum;
+	private int SecondNum;
+	
+	public MyCalculator(){
+		
+	}
+	
+	public void add(){
+		calculator.addition(firstNum,SecondNum);
+	}
+
+	public Calculator getCal() {
+		return calculator;
+	}
+
+	public void setCal(Calculator cal) {
+		this.cal = cal;
+	}
+
+	public int getFirstNum() {
+		return firstNum;
+	}
+
+	public void setFirstNum(int firstNum) {
+		this.firstNum = firstNum;
+	}
+
+	public int getSecondNum() {
+		return SecondNum;
+	}
+
+	public void setSecondNum(int secondNum) {
+		SecondNum = secondNum;
+	}
+
+	
+	
+}

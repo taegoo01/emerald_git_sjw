@@ -1,0 +1,47 @@
+package com.javalec.env;
+
+import java.io.IOException;
+
+import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.support.GenericApplicationContext;
+import org.springframework.context.support.GenericXmlApplicationContext;
+import org.springframework.core.env.ConfigurableEnvironment;
+import org.springframework.core.env.MutablePropertySources;
+import org.springframework.core.io.support.ResourcePropertySource;
+
+public class MainClass {
+
+	public static void main(String[] args) {
+
+		ConfigurableApplicationContext ctx = new GenericApplicationContext();
+		ConfigurableEnvironment env = ctx.getEnvironment();
+		MutablePropertySources propertySources = env.getPropertySources();
+	
+		//등록하면 알아서 스캔해서 찾음
+		try {
+			propertySources.addLast(new ResourcePropertySource("classpath:admin.properties"));
+			
+			System.out.println(env.getProperty("admin.id"));
+			System.out.println(env.getProperty("admin.pw"));
+			
+			
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+		GenericXmlApplicationContext gCtx = (GenericXmlApplicationContext)ctx;
+		gCtx.load("applicationCTXenv.xml");
+		gCtx.refresh();
+		
+		AdminConnection adminConnection = gCtx.getBean("adminConnection", AdminConnection.class);
+		System.out.println(adminConnection.getAdminId());
+		System.out.println(adminConnection.getAdminPw());
+		
+		gCtx.close();
+		ctx.close();
+		
+	
+	}
+
+	
+}

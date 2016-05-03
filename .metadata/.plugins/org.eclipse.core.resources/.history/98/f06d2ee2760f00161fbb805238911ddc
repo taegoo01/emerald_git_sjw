@@ -1,0 +1,10 @@
+package com.javalec.ex;
+
+public class Pencil6B implements PencilI {
+
+	@Override
+	public void use() {
+
+	}
+
+}

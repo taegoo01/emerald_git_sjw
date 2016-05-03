@@ -1,0 +1,10 @@
+package com.javalec.form;
+
+
+@Controller
+public class Controller {
+
+	public String formTest() {
+		
+	}
+}

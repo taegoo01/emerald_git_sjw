@@ -1,0 +1,11 @@
+package com.javalec.ex;
+
+public class Pencil4B implements PencilI {
+
+	@Override
+	public void use() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

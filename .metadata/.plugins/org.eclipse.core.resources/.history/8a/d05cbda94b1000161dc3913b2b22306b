@@ -1,0 +1,17 @@
+package com.javalec.form;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@org.springframework.stereotype.Controller
+public class Controller {
+
+	public String index() {
+		
+	}
+	
+	@RequestMapping("/form/formTest")
+	public String formTest(Member member) {
+		
+		return "form/formTest";
+	}
+}

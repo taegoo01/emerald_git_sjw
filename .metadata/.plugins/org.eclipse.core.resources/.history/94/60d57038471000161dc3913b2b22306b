@@ -1,0 +1,6 @@
+package com.javalec.mvc_pj;
+
+public class Member {
+
+	String name;
+}

@@ -1,0 +1,23 @@
+package com.javalex.ex;
+
+import org.springframework.beans.factory.DisposableBean;
+import org.springframework.beans.factory.InitializingBean;
+
+public class Student implements InitializingBean, DisposableBean{
+
+	private
+	
+	
+	@Override
+	public void destroy() throws Exception {
+
+		System.out.println("종료");
+	}
+
+	@Override
+	public void afterPropertiesSet() throws Exception {
+
+		System.out.println("시작");
+	}
+
+}

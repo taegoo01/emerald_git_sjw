@@ -1,0 +1,13 @@
+package com.javalec.env;
+
+import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.support.GenericApplicationContext;
+
+public class MainClass {
+
+	public static void main(String[] args) {
+
+		ConfigurableApplicationContext ctx = new GenericApplicationContext();
+	}
+
+}

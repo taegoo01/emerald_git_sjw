@@ -1,0 +1,18 @@
+package com.javalec.mvc_pj;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+
+@Controller
+public class RedirectController {
+
+	public String studentRedirect(HttpServletRequest httpServletRequest,
+			Model model){
+		
+		
+		
+		return "";
+	}
+}

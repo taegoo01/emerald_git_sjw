@@ -1,0 +1,12 @@
+package com.javalec.form;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+
+public class Controller {
+
+	@RequestMapping()
+	public String formTest() {
+		
+		return ""
+	}
+}

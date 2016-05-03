@@ -1,0 +1,6 @@
+package com.javalec.single;
+
+public class Student {
+
+	String name;
+}

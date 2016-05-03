@@ -1,0 +1,9 @@
+package com.javalec.env;
+
+import org.springframework.beans.factory.DisposableBean;
+import org.springframework.beans.factory.InitializingBean;
+import org.springframework.context.EnvironmentAware;
+
+public class AdminConnection implements EnvironmentAware, InitializingBean, DisposableBean{
+
+}

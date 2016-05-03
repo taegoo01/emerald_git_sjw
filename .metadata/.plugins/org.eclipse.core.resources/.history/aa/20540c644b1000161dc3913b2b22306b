@@ -1,0 +1,11 @@
+package com.javalec.form;
+
+
+@org.springframework.stereotype.Controller
+public class Controller {
+
+	public String formTest() {
+		
+		return
+	}
+}

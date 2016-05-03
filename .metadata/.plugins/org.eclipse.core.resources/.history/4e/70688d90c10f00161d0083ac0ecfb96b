@@ -1,0 +1,19 @@
+package com.javalec.ex;
+
+import org.aspectj.lang.ProceedingJoinPoint;
+
+public class LogAop {
+
+	public Object loggerAop(ProceedingJoinPoint joinpoint){
+		String signatureStr = joinpoint.getSignature().toShortString();
+		System.out.println(signatureStr + "start");
+		long = System.currentTimeMillis();
+		
+		try {
+			Object obj = joinpoint.proceed();
+			return obj;
+		} catch (Throwable e) {
+			e.printStackTrace();
+		}
+	}
+}

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id="logAop" class="com.javalec.ex.LogAop"/>
+	
+	<aop:config>
+	 	<aop:aspect id="logger" ref="logAop">
+	 		<aop:pointcut id="publicM" expression="within(com.javalec.ex.*)" />
+	 		<aop:around pointcut-ref="publicM"  method="loggerAop"/>
+	 	</aop:aspect>
+	</aop:config>
+	
+	<bean id="student" class="com.javalec.ex.Student">
+	 <property name="name" value="소희"></property>
+	 <property name="age" value="32"></property>
+	 <property name="like" value="재우"></property>
+	</bean>
+
+</beans>

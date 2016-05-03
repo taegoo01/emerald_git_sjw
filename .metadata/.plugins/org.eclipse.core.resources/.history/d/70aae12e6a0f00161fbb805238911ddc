@@ -1,0 +1,10 @@
+package com.javalec.ex;
+
+public class MyCalculator {
+
+	public Calculator cal;
+	private int firstNum;
+	private int SecondNum;
+	
+	
+}

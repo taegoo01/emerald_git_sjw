@@ -1,0 +1,7 @@
+package com.javalec.env;
+
+import org.springframework.context.EnvironmentAware;
+
+public class AdminConnection implements EnvironmentAware{
+
+}

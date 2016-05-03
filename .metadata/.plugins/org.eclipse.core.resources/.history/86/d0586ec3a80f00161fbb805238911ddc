@@ -1,0 +1,8 @@
+package com.javalec.ex;
+
+import org.springframework.beans.factory.DisposableBean;
+import org.springframework.beans.factory.InitializingBean;
+
+public class AdminConnection implements InitializingBean, DisposableBean{
+
+}

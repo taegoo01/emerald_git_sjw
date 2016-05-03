@@ -1,0 +1,17 @@
+package com.javalec.mvc_pj;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+
+@Controller
+public class HttpRquest {
+
+	public String confirmId(HttpServletRequest httpServletRequest, Model model){
+		String id= httpServletRequest.getParameter(id);
+		String id= httpServletRequest.getParameter(pw);
+		
+		return "board/confirmId";
+	}
+}

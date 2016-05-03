@@ -1,0 +1,28 @@
+package com.javalec.anno;
+
+import org.aspectj.lang.ProceedingJoinPoint;
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Pointcut;
+
+@Aspect
+public class LogAop {
+	@Pointcut("within(com.javalec.anno.*)")
+	private void pointcutMethod(){
+		
+	}
+	
+	public Object loggerAop(ProceedingJoinPoint joinpoint) throws Throwable{
+		String signatureStr = joinpoint.getSignature().toShortString();
+		System.out.println(signatureStr + "start");
+		long st = System.currentTimeMillis();
+		
+		try {
+			Object obj = joinpoint.proceed();
+			return obj;
+		}finally{
+			long et = System.currentTimeMillis();
+			System.out.println(signatureStr + "finish");
+			System.out.println(signatureStr + "경과시간:" + (et - st));
+		}
+	}
+}

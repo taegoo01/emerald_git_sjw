@@ -1,0 +1,8 @@
+package com.javalex.ex;
+
+import org.springframework.beans.factory.DisposableBean;
+import org.springframework.beans.factory.InitializingBean;
+
+public class Student implements InitializingBean, DisposableBean{
+
+}
